@@ -1,0 +1,45 @@
+subprojects {
+    apply plugin: 'java'
+    group = 'org.sgx'
+    version = '1.0'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        testCompile "junit:junit:4.12"
+    }
+}
+
+project(':java-utils') {
+    dependencies {
+        testCompile "junit:junit:4.12"
+    }
+}
+
+project(':java-model') {
+    dependencies {
+        testCompile "junit:junit:4.12"
+    }
+}
+
+project(':java-swing') {
+    dependencies {
+        testCompile "junit:junit:4.12"
+        compile project(':java-utils'), project(':java-model')
+    }
+}
+
+project(':picture-makeup') {
+    dependencies {
+        testCompile "junit:junit:4.12"
+        compile project(':java-utils'), project(':java-model'), project(':java-swing')
+    }
+}
+
+project(':desktop-media-tools') {
+    dependencies {
+        testCompile "junit:junit:4.12"
+        compile project(':java-utils'), project(':java-model'), project(':java-swing')
+    }
+}
+

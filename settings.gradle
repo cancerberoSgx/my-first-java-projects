@@ -1,0 +1,3 @@
+rootProject.name = 'my-first-java-projects'
+
+include 'java-utils', 'java-model', 'java-swing', 'picture-makeup', 'desktop-media-tools'
